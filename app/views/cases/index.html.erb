@@ -1,0 +1,21 @@
+<h2>Cases</h2>
+<br>
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Case ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">File Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cases.each do |c| %>
+      <tr>
+        <td><%= c.case_id %></td>
+        <td><%= c.case_title %></td>
+        <td><%= truncate(c.file_date, length: 75) %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
